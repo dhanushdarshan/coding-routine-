@@ -1,0 +1,19 @@
+#1
+print("classic hello world")
+#2
+print("hello" " dhanush")
+#3
+print("hello" +"_"+ input( "what is your name?" ) +"!" )
+#4
+username = input("what is your name ?")
+length = len(username)
+print(length)
+#5
+name = ('dhanush')
+length = len(name)
+print(length)
+#6  
+print("hello dhanush")
+print(input("who is your idol?"))
+print(input("how many goals are scored by dhanush?"))
+print(input("is dhanush is ece student?"))  
