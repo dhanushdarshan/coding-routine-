@@ -1,0 +1,90 @@
+# subscripting
+print("dhanush"[2 ])
+
+# integer = whole number
+print(98+2)
+
+# large numbers
+print(123_4566_88)
+
+# float numbers
+print(3.1484697346)
+
+# boolean
+print(True)
+print(False)
+
+
+len("akshaya")
+
+# types of data
+print(type("akshaya"))
+print(type(69))
+print(type(3.14))
+print(type(True))
+
+print(int("123")+int("454"))
+print(str("akshaya") + str("dhanush"))
+
+
+name_of_the_user =input("Enter your name ")
+lenghth_of_the_name = len(name_of_the_user)
+
+print(type("Number of letters in your name: "))#str
+print(type(lenghth_of_the_name))#int
+print("Number of letters in your name: " + str(lenghth_of_the_name ))
+
+print("my age" + str(19))
+
+print(12+2)
+print(12-2)
+print(12*2)
+print(12/2)
+# print(11//1)
+print(float(33/7867))
+print(3**3)
+
+# ()
+# **
+# * 0r /
+# + or -
+
+print(3 * 3 + 3 / 3 - 3)
+
+bmi = 84 / 1.65 ** 2
+print(bmi)
+
+print(int(bmi))
+
+print(round(bmi))
+
+print(round(bmi, 2))
+
+score = 0
+# dhanush score point
+score += 1
+print(score)
+
+# f string
+print("your score is " + str(score))
+
+score = 0
+height = 5.11
+is_winning = True
+
+print(f"your score is = {score},"
+      f"your height is = {height},"
+      f"did we won = {is_winning}" )
+
+print("welcome to the calculator!")
+bill = float(input("what was the total bill? $"))
+tip = int(input("what percentage tip would you like to give? 10 12 15"))
+people = int(input("how many people to split the bill?"))
+bill_with_tip = tip / 100* bill +bill
+print(bill_with_tip)
+        
+        
+        
+
+        
+  
