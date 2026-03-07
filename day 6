@@ -1,0 +1,4 @@
+def my_function():
+ print("i am the best")
+ print("ofc i am the best")
+my_function()
