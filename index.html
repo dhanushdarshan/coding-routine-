@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroSense – Smart Agriculture</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- =====================================================
+     PAGE 1 — LANDING
+====================================================== -->
+<div id="pg-landing" class="screen active">
+  <div class="lp-bg">
+    <svg class="lp-leaf" viewBox="0 0 100 100"><path d="M10 90 Q50 10 90 50 Q50 90 10 90Z" fill="#66bb6a"/></svg>
+    <svg class="lp-leaf" viewBox="0 0 100 100"><path d="M10 90 Q50 10 90 50 Q50 90 10 90Z" fill="#a5d6a7"/></svg>
+    <svg class="lp-leaf" viewBox="0 0 100 100"><path d="M10 90 Q50 10 90 50 Q50 90 10 90Z" fill="#81c784"/></svg>
+    <svg class="lp-leaf" viewBox="0 0 100 100"><path d="M10 90 Q50 10 90 50 Q50 90 10 90Z" fill="#66bb6a"/></svg>
+    <svg class="lp-leaf" viewBox="0 0 100 100"><path d="M10 90 Q50 10 90 50 Q50 90 10 90Z" fill="#c8e6c9"/></svg>
+    <svg class="lp-leaf" viewBox="0 0 100 100"><path d="M10 90 Q50 10 90 50 Q50 90 10 90Z" fill="#a5d6a7"/></svg>
+  </div>
+  <div class="lp-body">
+    <div class="lp-pill" data-i18n="lp_pill">🌿 Smart Agriculture Platform for Indian Farmers</div>
+    <h1 class="lp-h1"><span data-i18n="lp_h1_line1">Grow Smarter,</span><br><span data-i18n="lp_h1_span">Harvest Better</span></h1>
+    <p class="lp-sub" data-i18n="lp_sub">AI-powered crop intelligence, disease detection, and market insights — built for every farmer, in every language.</p>
+    <div class="lp-btns">
+      <button class="btn-lp-green" onclick="goPage('pg-login')" data-i18n="lp_btn_start">Get Started Free</button>
+      <button class="btn-lp-ghost" onclick="goPage('pg-login')" data-i18n="lp_btn_demo">▶ Watch Demo</button>
+    </div>
+    <div class="lp-stats">
+      <div><div class="lp-stat-n">2.4L+</div><div class="lp-stat-l" data-i18n="lp_stat1_l">Farmers Onboarded</div></div>
+      <div><div class="lp-stat-n">94%</div><div class="lp-stat-l" data-i18n="lp_stat2_l">Disease Detection Accuracy</div></div>
+      <div><div class="lp-stat-n">₹18Cr</div><div class="lp-stat-l" data-i18n="lp_stat3_l">Yield Revenue Saved</div></div>
+    </div>
+    <div class="lp-chips">
+      <div class="lp-chip" data-i18n="lp_chip1">🌾 Crop Recommendation</div>
+      <div class="lp-chip" data-i18n="lp_chip2">🔬 Disease Detection</div>
+      <div class="lp-chip" data-i18n="lp_chip3">📈 Market Prices</div>
+      <div class="lp-chip" data-i18n="lp_chip4">🎤 Voice AI</div>
+    </div>
+  </div>
+</div>
+
+<!-- =====================================================
+     PAGE 2 — LOGIN
+====================================================== -->
+<div id="pg-login" class="screen">
+  <div class="login-box">
+    <div class="login-logo">
+      <svg width="28" height="28" viewBox="0 0 100 100" fill="#fff"><path d="M10 90 Q50 10 90 50 Q50 90 10 90Z"/></svg>
+    </div>
+    <div class="login-h" data-i18n="login_h">Welcome to AgroSense</div>
+    <div class="login-sub" data-i18n="login_sub">Sign in to your farm dashboard</div>
+
+    <button class="google-btn" data-i18n="login_google">🔵 Continue with Google</button>
+    <div class="or-divider" data-i18n="login_or">or sign in with email</div>
+
+    <label class="fl" data-i18n="login_lbl_em">Email or Phone</label>
+    <input class="fi" type="text" data-i18n-ph="login_lbl_em" placeholder="farmer@agrosense.in" value="raju@farm.in" />
+
+    <label class="fl" data-i18n="login_lbl_pw">Password</label>
+    <input class="fi" type="password" placeholder="••••••••" value="password" />
+
+    <button class="btn-signin" onclick="goPage('pg-setup')" data-i18n="login_btn">Sign In to Dashboard →</button>
+
+    <div class="login-foot">
+      <span data-i18n="login_foot">Don't have an account?</span> <a onclick="goPage('pg-setup')" data-i18n="login_reg">Register Free</a>
+    </div>
+    <a class="login-back" onclick="goPage('pg-landing')" data-i18n="login_back">← Back to home</a>
+  </div>
+</div>
+
+<!-- =====================================================
+     PAGE 3 — FARM SETUP
+====================================================== -->
+<div id="pg-setup" class="screen">
+  <div class="setup-hdr">
+    <div class="logo-mark">
+      <div class="logo-icon">
+        <svg width="20" height="20" viewBox="0 0 100 100" fill="#fff"><path d="M10 90 Q50 10 90 50 Q50 90 10 90Z"/></svg>
+      </div>
+      <span class="logo-txt">AgroSense</span>
+    </div>
+    <span style="font-size:.82rem;color:#718096" data-i18n="setup_step">Farm Setup — Step 1 of 2</span>
+  </div>
+
+  <div class="setup-scroll">
+    <div class="setup-card">
+      <div class="prog">
+        <div class="prog-s on"></div>
+        <div class="prog-s on"></div>
+        <div class="prog-s"></div>
+        <div class="prog-s"></div>
+      </div>
+      <div class="setup-h" data-i18n="setup_h">Tell us about your farm</div>
+      <div class="setup-sub" data-i18n="setup_sub">We'll personalise your dashboard, crop recommendations and alerts based on your profile.</div>
+
+      <div class="form-grid">
+        <div>
+          <label class="fl" data-i18n="setup_lbl_name">Your Full Name</label>
+          <input class="fi" id="inp-name" type="text" value="Raju Patil" data-i18n-ph="setup_lbl_name" placeholder="e.g. Raju Patil" />
+        </div>
+        <div>
+          <label class="fl" data-i18n="setup_lbl_crop">Primary Crop</label>
+          <select class="fi fsel-arrow" id="inp-crop">
+            <option>Wheat</option>
+            <option>Rice</option>
+            <option selected>Tomato</option>
+            <option>Cotton</option>
+            <option>Maize</option>
+            <option>Sugarcane</option>
+            <option>Onion</option>
+          </select>
+        </div>
+        <div>
+          <label class="fl" data-i18n="setup_lbl_acre">Farm Size (Acres)</label>
+          <input class="fi" id="inp-acres" type="number" value="5" placeholder="e.g. 5" />
+        </div>
+        <div>
+          <label class="fl" data-i18n="setup_lbl_soil">Soil Type</label>
+          <select class="fi fsel-arrow">
+            <option selected>Black Cotton Soil</option>
+            <option>Red Laterite</option>
+            <option>Alluvial</option>
+            <option>Sandy Loam</option>
+          </select>
+        </div>
+        <div>
+          <label class="fl" data-i18n="setup_lbl_exp">Farming Experience</label>
+          <select class="fi fsel-arrow">
+            <option>0–2 years</option>
+            <option selected>3–10 years</option>
+            <option>10–20 years</option>
+            <option>20+ years</option>
+          </select>
+        </div>
+        <div>
+          <label class="fl" data-i18n="setup_lbl_dur">Crop Duration</label>
+          <select class="fi fsel-arrow">
+            <option>2–3 months</option>
+            <option selected>4–6 months</option>
+            <option>6–9 months</option>
+            <option>Year-round</option>
+          </select>
+        </div>
+        <div>
+          <label class="fl" data-i18n="setup_lbl_vill">Village / Taluka</label>
+          <input class="fi" value="Hadapsar, Pune" placeholder="e.g. Hadapsar, Pune" />
+        </div>
+        <div>
+          <label class="fl" data-i18n="setup_lbl_state">State</label>
+          <select class="fi fsel-arrow">
+            <option selected>Maharashtra</option>
+            <option>Karnataka</option>
+            <option>Punjab</option>
+            <option>Uttar Pradesh</option>
+            <option>Gujarat</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <button class="btn-back"     onclick="goPage('pg-login')" data-i18n="setup_back">← Back</button>
+        <button class="btn-continue" onclick="enterDashboard()"   data-i18n="setup_cont">Continue to Dashboard →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- =====================================================
+     PAGE 4 — DASHBOARD
+====================================================== -->
+<div id="pg-dash" class="screen">
+
+  <!-- SIDEBAR -->
+  <nav class="sidebar">
+    <div class="sb-logo">
+      <div class="logo-mark">
+        <div class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 100 100" fill="#fff"><path d="M10 90 Q50 10 90 50 Q50 90 10 90Z"/></svg>
+        </div>
+        <span class="logo-txt">AgroSense</span>
+      </div>
+    </div>
+
+    <div class="sb-nav">
+      <div class="nav-item on"  onclick="showSection('home',    this)"><span class="nav-ic">🏠</span><span data-i18n="nav_home">Home</span></div>
+      <div class="nav-item"     onclick="showSection('crops',   this)"><span class="nav-ic">🌾</span><span data-i18n="nav_crops">Crop Advice</span></div>
+      <div class="nav-item"     onclick="showSection('disease', this)"><span class="nav-ic">🔬</span><span data-i18n="nav_disease">Disease Check</span></div>
+      <div class="nav-item"     onclick="showSection('alerts',  this)"><span class="nav-ic">🔔</span><span data-i18n="nav_alerts">Alerts</span></div>
+      <div class="nav-item"     onclick="showSection('settings',this)"><span class="nav-ic">⚙️</span><span data-i18n="nav_settings">Settings</span></div>
+    </div>
+
+    <div class="sb-foot">
+      <div class="farmer-chip">
+        <div class="f-av" id="sb-av">RP</div>
+        <div style="flex:1;overflow:hidden">
+          <div class="f-name" id="sb-name">Raju Patil</div>
+          <div class="f-crop" id="sb-crop">Tomato · 5 acres</div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN AREA -->
+  <div class="dash-main">
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <span class="tb-title" id="tb-title" data-i18n-live="title_home">Farm Overview</span>
+      <div class="tb-right">
+        <button class="lang-btn on" onclick="setLang(this)">EN</button>
+        <button class="lang-btn"    onclick="setLang(this)">HI</button>
+        <button class="lang-btn"    onclick="setLang(this)">KN</button>
+        <div class="bell-btn" onclick="showSection('alerts',null)">
+          🔔<div class="bell-dot"></div>
+        </div>
+        <div class="user-pill">
+          <div class="up-av" id="tb-av">RP</div>
+          <span class="up-name" id="tb-name">Raju Patil</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================
+         SECTION: HOME
+    ============================================= -->
+    <div id="sec-home" class="dash-section on">
+
+      <!-- HERO BANNER -->
+      <div class="hero-banner">
+        <div class="hero-orb1"></div>
+        <div class="hero-orb2"></div>
+        <div style="position:relative;z-index:1">
+          <div style="font-size:.78rem;color:#a5d6a7;margin-bottom:.3rem;font-weight:500" data-i18n="hero_greeting">Good morning ☀️</div>
+          <div id="hero-name" style="font-family:'Playfair Display',serif;font-size:1.55rem;color:#fff;font-weight:700;margin-bottom:.25rem">Raju Patil</div>
+          <div style="font-size:.85rem;color:#c8e6c9" data-i18n="hero_crop_info">Tomato crop is on track · Day 67 of 150</div>
+        </div>
+        <div class="hero-stats" style="position:relative;z-index:1">
+          <div class="hero-stat"><div class="hs-num">44%</div><div class="hs-lbl" data-i18n="hs_season">Season Progress</div></div>
+          <div class="hero-stat"><div class="hs-num">₹24</div><div class="hs-lbl" data-i18n="hs_price">Price /kg Today</div></div>
+          <div class="hero-stat"><div class="hs-num" style="color:#fbbf24">3</div><div class="hs-lbl" data-i18n="hs_alerts">Active Alerts</div></div>
+          <div class="hero-stat"><div class="hs-num">82</div><div class="hs-lbl" data-i18n="hs_health">Health Score</div></div>
+        </div>
+      </div>
+
+      <!-- ROW 1 -->
+      <div style="display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:1rem;margin-bottom:1rem">
+
+        <!-- WEATHER -->
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.875rem">
+            <div>
+              <div style="font-size:.7rem;color:#718096;font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-bottom:.3rem" data-i18n="weather_loc">📍 Pune, Maharashtra</div>
+              <div style="font-size:2.8rem;font-weight:800;color:#1b5e20;line-height:1">28°C</div>
+              <div style="font-size:.82rem;color:#4a5568;margin-top:.25rem" data-i18n="weather_desc">Partly Cloudy · Good for spray</div>
+            </div>
+            <div style="font-size:3.2rem;line-height:1">⛅</div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin-bottom:.875rem">
+            <div style="background:#e8f5e9;border-radius:10px;padding:.55rem;text-align:center">
+              <div>💧</div><div style="font-size:.8rem;font-weight:700;color:#1b5e20">72%</div><div style="font-size:.65rem;color:#718096" data-i18n="weather_hum">Humidity</div>
+            </div>
+            <div style="background:#e8f5e9;border-radius:10px;padding:.55rem;text-align:center">
+              <div>💨</div><div style="font-size:.8rem;font-weight:700;color:#1b5e20">14</div><div style="font-size:.65rem;color:#718096" data-i18n="weather_wind">km/h</div>
+            </div>
+            <div style="background:#e8f5e9;border-radius:10px;padding:.55rem;text-align:center">
+              <div>🌧</div><div style="font-size:.8rem;font-weight:700;color:#1b5e20">30%</div><div style="font-size:.65rem;color:#718096" data-i18n="weather_rain">Rain</div>
+            </div>
+          </div>
+          <div style="border-top:1px solid #d4e6d4;padding-top:.75rem">
+            <div style="font-size:.7rem;font-weight:700;color:#2e7d32;text-transform:uppercase;letter-spacing:.03em;margin-bottom:.45rem" data-i18n="weather_5day">5-Day Forecast</div>
+            <div style="display:flex;justify-content:space-between">
+              <div style="text-align:center;font-size:.7rem;color:#718096"><div>Mon</div><div>☀️</div><div style="font-weight:700;color:#1a1a1a">30°</div></div>
+              <div style="text-align:center;font-size:.7rem;color:#718096"><div>Tue</div><div>⛅</div><div style="font-weight:700;color:#1a1a1a">28°</div></div>
+              <div style="text-align:center;font-size:.7rem;color:#718096"><div>Wed</div><div>🌧</div><div style="font-weight:700;color:#3b82f6">25°</div></div>
+              <div style="text-align:center;font-size:.7rem;color:#718096"><div>Thu</div><div>🌧</div><div style="font-weight:700;color:#3b82f6">24°</div></div>
+              <div style="text-align:center;font-size:.7rem;color:#718096"><div>Fri</div><div>☀️</div><div style="font-weight:700;color:#1a1a1a">31°</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CROP HEALTH -->
+        <div class="card">
+          <div style="font-size:.7rem;color:#718096;font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-bottom:.75rem" data-i18n="ch_title">Crop Health</div>
+          <div style="display:flex;align-items:center;justify-content:center;margin-bottom:.75rem">
+            <div style="position:relative;width:90px;height:90px">
+              <svg viewBox="0 0 100 100" width="90" height="90">
+                <circle cx="50" cy="50" r="42" fill="none" stroke="#e8f5e9" stroke-width="10"/>
+                <circle cx="50" cy="50" r="42" fill="none" stroke="#2e7d32" stroke-width="10"
+                  stroke-dasharray="263.9" stroke-dashoffset="47.5"
+                  stroke-linecap="round" transform="rotate(-90 50 50)"/>
+              </svg>
+              <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
+                <div style="font-size:1.5rem;font-weight:800;color:#1b5e20">82</div>
+                <div style="font-size:.6rem;color:#718096">/100</div>
+              </div>
+            </div>
+          </div>
+          <div style="text-align:center;margin-bottom:.75rem"><span class="badge bdg-g" data-i18n="ch_badge">Good Health</span></div>
+          <div style="display:flex;flex-direction:column;gap:.45rem">
+            <div><div style="display:flex;justify-content:space-between;font-size:.73rem;color:#718096;margin-bottom:.18rem"><span data-i18n="ch_leaf">Leaf health</span><span style="color:#2e7d32;font-weight:700">90%</span></div><div style="height:5px;background:#e8f5e9;border-radius:3px"><div style="width:90%;height:100%;background:#43a047;border-radius:3px"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:.73rem;color:#718096;margin-bottom:.18rem"><span data-i18n="ch_root">Root strength</span><span style="color:#2e7d32;font-weight:700">78%</span></div><div style="height:5px;background:#e8f5e9;border-radius:3px"><div style="width:78%;height:100%;background:#43a047;border-radius:3px"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:.73rem;color:#718096;margin-bottom:.18rem"><span data-i18n="ch_fruit">Fruit set</span><span style="color:#f59e0b;font-weight:700">75%</span></div><div style="height:5px;background:#e8f5e9;border-radius:3px"><div style="width:75%;height:100%;background:#f59e0b;border-radius:3px"></div></div></div>
+          </div>
+          <div style="margin-top:.75rem;display:flex;gap:.3rem;flex-wrap:wrap"><span class="tag" data-i18n="ch_tag1">Day 67</span><span class="tag" data-i18n="ch_tag2">Flowering</span><span class="tag" data-i18n="ch_tag3">No Pest</span></div>
+        </div>
+
+        <!-- MARKET -->
+        <div class="card">
+          <div style="font-size:.7rem;color:#718096;font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-bottom:.75rem" data-i18n="mkt_title">Market Prices</div>
+          <div style="padding:.875rem;background:#e8f5e9;border-radius:12px;border-left:4px solid #2e7d32;margin-bottom:.875rem">
+            <div style="font-size:.7rem;color:#718096;margin-bottom:.2rem" data-i18n="mkt_mandi">🍅 Tomato · Pune APMC</div>
+            <div style="display:flex;align-items:baseline;gap:.4rem">
+              <span style="font-size:2rem;font-weight:800;color:#1b5e20">₹24</span>
+              <span style="font-size:.78rem;color:#718096">/kg</span>
+              <span class="pup" style="margin-left:auto">↑ 8%</span>
+            </div>
+            <div style="font-size:.72rem;color:#718096;margin-top:.2rem" data-i18n="mkt_window">Best sell window: Apr 7–12</div>
+          </div>
+          <div class="mrow"><div style="font-size:.82rem">🌶 Red Chilli</div><div style="font-size:.82rem;font-weight:700">₹110/kg <span class="pdn" style="font-size:.72rem">↓3%</span></div></div>
+          <div class="mrow"><div style="font-size:.82rem">🧅 Onion</div><div style="font-size:.82rem;font-weight:700">₹18/kg <span class="pup" style="font-size:.72rem">↑12%</span></div></div>
+          <div class="mrow"><div style="font-size:.82rem">🌾 Wheat</div><div style="font-size:.82rem;font-weight:700">₹22/kg <span style="font-size:.72rem;color:#718096">→</span></div></div>
+          <button class="btn btn-o btn-sm" style="width:100%;margin-top:.75rem" onclick="showSection('crops',null)" data-i18n="mkt_full">Full Market →</button>
+        </div>
+      </div>
+
+      <!-- ROW 2 -->
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:1rem">
+
+        <!-- ALERTS -->
+        <div class="card" style="border-left:4px solid #ef4444">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.875rem">
+            <div style="font-size:.7rem;color:#718096;font-weight:600;text-transform:uppercase;letter-spacing:.04em" data-i18n="al_title">Urgent Alerts</div>
+            <span class="badge bdg-r" data-i18n="al_badge">3 Active</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:.6rem">
+            <div style="padding:.7rem;background:#fff5f5;border-radius:10px;border:1px solid #fecaca">
+              <div style="font-size:.8rem;font-weight:700;color:#dc2626;margin-bottom:.12rem" data-i18n="al1_title">🦠 Late Blight Risk – High</div>
+              <div style="font-size:.73rem;color:#7f1d1d;line-height:1.5;margin-bottom:.45rem" data-i18n="al1_desc">High humidity + cool nights. Spray within 48 hrs.</div>
+              <button class="btn btn-p btn-sm" onclick="showSection('disease',null)" data-i18n="al1_btn">Treat Now</button>
+            </div>
+            <div style="padding:.7rem;background:#fffbeb;border-radius:10px;border:1px solid #fde68a">
+              <div style="font-size:.8rem;font-weight:700;color:#92400e;margin-bottom:.12rem" data-i18n="al2_title">💧 Irrigation Due</div>
+              <div style="font-size:.73rem;color:#78350f" data-i18n="al2_desc">Soil moisture 38%. Due in 2 days.</div>
+            </div>
+            <div style="padding:.7rem;background:#eff6ff;border-radius:10px;border:1px solid #bfdbfe">
+              <div style="font-size:.8rem;font-weight:700;color:#1e40af;margin-bottom:.12rem" data-i18n="al3_title">🌧 Rain Forecast Friday</div>
+              <div style="font-size:.73rem;color:#1e3a8a" data-i18n="al3_desc">15–25mm expected. Delay fertiliser.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ACTIVITY -->
+        <div class="card">
+          <div style="font-size:.7rem;color:#718096;font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-bottom:.875rem" data-i18n="act_title">Today's Activity</div>
+          <div style="display:flex;flex-direction:column;gap:.05rem">
+            <div style="display:flex;gap:.875rem;padding-bottom:.65rem;border-bottom:1px solid #d4e6d4">
+              <div style="width:38px;flex-shrink:0;text-align:center"><div style="font-size:.68rem;color:#718096">6 AM</div><div style="width:2px;height:18px;background:#66bb6a;border-radius:1px;margin:.2rem auto"></div></div>
+              <div><div style="font-size:.8rem;font-weight:700" data-i18n="act1_title">✅ Morning irrigation</div><div style="font-size:.72rem;color:#718096" data-i18n="act1_sub">North field · 45 min</div></div>
+            </div>
+            <div style="display:flex;gap:.875rem;padding:.65rem 0;border-bottom:1px solid #d4e6d4">
+              <div style="width:38px;flex-shrink:0;text-align:center"><div style="font-size:.68rem;color:#718096">10 AM</div><div style="width:2px;height:18px;background:#f59e0b;border-radius:1px;margin:.2rem auto"></div></div>
+              <div><div style="font-size:.8rem;font-weight:700" data-i18n="act2_title">⚠ Disease scan alert</div><div style="font-size:.72rem;color:#718096" data-i18n="act2_sub">Late blight risk flagged</div></div>
+            </div>
+            <div style="display:flex;gap:.875rem;padding:.65rem 0;border-bottom:1px solid #d4e6d4">
+              <div style="width:38px;flex-shrink:0;text-align:center"><div style="font-size:.68rem;color:#718096">2 PM</div><div style="width:2px;height:18px;background:#d4e6d4;border-radius:1px;margin:.2rem auto"></div></div>
+              <div><div style="font-size:.8rem;font-weight:600;color:#718096" data-i18n="act3_title">⏳ Spray scheduled</div><div style="font-size:.72rem;color:#718096" data-i18n="act3_sub">Mancozeb · Pending</div></div>
+            </div>
+            <div style="display:flex;gap:.875rem;padding:.65rem 0">
+              <div style="width:38px;flex-shrink:0;text-align:center"><div style="font-size:.68rem;color:#718096">5 PM</div><div style="width:2px;height:18px;background:#d4e6d4;border-radius:1px;margin:.2rem auto"></div></div>
+              <div><div style="font-size:.8rem;font-weight:600;color:#718096" data-i18n="act4_title">⏳ Field walk</div><div style="font-size:.72rem;color:#718096" data-i18n="act4_sub">Weekly visual inspection</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI TIP + QUICK ACTIONS -->
+        <div style="display:flex;flex-direction:column;gap:.875rem">
+          <div class="card" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border-color:#86efac;flex:1">
+            <div style="font-size:.7rem;color:#2e7d32;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:.6rem" data-i18n="ai_tip_title">🤖 AI Tip of the Day</div>
+            <p style="font-size:.82rem;color:#14532d;line-height:1.65;margin-bottom:.6rem" data-i18n="ai_tip_text">"Your tomato plants are at peak flowering. Apply potassium-rich fertiliser (0-0-50) this week to boost fruit set by up to 20%."</p>
+            <div style="font-size:.7rem;color:#2e7d32;font-style:italic" data-i18n="ai_tip_sub">Based on Day 67 data + weather forecast</div>
+          </div>
+          <div class="card">
+            <div style="font-size:.7rem;color:#718096;font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-bottom:.65rem" data-i18n="qa_title">Quick Actions</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem">
+              <button class="btn btn-o btn-sm" onclick="showSection('disease',null)" data-i18n="qa_scan">🔬 Scan</button>
+              <button class="btn btn-o btn-sm" onclick="showSection('crops',null)"   data-i18n="qa_advise">🌾 Advise</button>
+              <button class="btn btn-o btn-sm" onclick="showSection('alerts',null)"  data-i18n="qa_alerts">🔔 Alerts</button>
+              <button class="btn btn-p btn-sm" onclick="toggleVoice()"               data-i18n="qa_ask">🎤 Ask AI</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW 3: CHARTS -->
+      <div class="g2">
+        <div class="card">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.875rem">
+            <div class="sec-title" style="margin-bottom:0" data-i18n="yield_title">📈 Yield Forecast</div>
+            <span class="badge bdg-g" data-i18n="yield_badge">On Track</span>
+          </div>
+          <div style="position:relative;height:170px"><canvas id="yieldChart"></canvas></div>
+          <div style="display:flex;justify-content:space-between;margin-top:.875rem;padding-top:.75rem;border-top:1px solid #d4e6d4">
+            <div><div style="font-size:.7rem;color:#718096" data-i18n="yield_lbl1">Expected yield</div><div style="font-weight:800;font-size:.95rem;color:#1b5e20" data-i18n="yield_val1">4,750 kg/acre</div></div>
+            <div><div style="font-size:.7rem;color:#718096" data-i18n="yield_lbl2">Harvest in</div><div style="font-weight:800;font-size:.95rem;color:#1b5e20" data-i18n="yield_val2">83 days</div></div>
+            <div><div style="font-size:.7rem;color:#718096" data-i18n="yield_lbl3">Est. revenue</div><div style="font-weight:800;font-size:.95rem;color:#2e7d32">₹1.14L</div></div>
+          </div>
+        </div>
+        <div class="card">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.875rem">
+            <div class="sec-title" style="margin-bottom:0" data-i18n="profit_title">💰 Season Economics</div>
+            <span class="badge bdg-g" data-i18n="profit_badge">Profitable</span>
+          </div>
+          <div style="position:relative;height:170px"><canvas id="profitChart"></canvas></div>
+          <div style="display:flex;justify-content:space-between;margin-top:.875rem;padding-top:.75rem;border-top:1px solid #d4e6d4">
+            <div><div style="font-size:.7rem;color:#718096" data-i18n="profit_lbl1">Total cost</div><div style="font-weight:800;font-size:.95rem;color:#dc2626">₹40,000</div></div>
+            <div><div style="font-size:.7rem;color:#718096" data-i18n="profit_lbl2">Gross revenue</div><div style="font-weight:800;font-size:.95rem;color:#43a047">₹1,14,000</div></div>
+            <div><div style="font-size:.7rem;color:#718096" data-i18n="profit_lbl3">Net profit</div><div style="font-weight:800;font-size:.95rem;color:#1b5e20">₹74,000</div></div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /sec-home -->
+
+    <!-- ============================================
+         SECTION: CROPS
+    ============================================= -->
+    <div id="sec-crops" class="dash-section">
+      <div class="g4" style="margin-bottom:1rem">
+        <div style="background:#e8f5e9;border:1px solid #d4e6d4;border-radius:14px;padding:1rem"><div style="font-size:.7rem;color:#718096;text-transform:uppercase;font-weight:600;margin-bottom:.3rem" data-i18n="cr_your_crop">Your Crop</div><div id="cr-crop" style="font-size:1.2rem;font-weight:800;color:#1b5e20">🍅 Tomato</div></div>
+        <div style="background:#e8f5e9;border:1px solid #d4e6d4;border-radius:14px;padding:1rem"><div style="font-size:.7rem;color:#718096;text-transform:uppercase;font-weight:600;margin-bottom:.3rem" data-i18n="cr_farm_size">Farm Size</div><div id="cr-acres" style="font-size:1.2rem;font-weight:800;color:#1b5e20">5 Acres</div></div>
+        <div style="background:#e8f5e9;border:1px solid #d4e6d4;border-radius:14px;padding:1rem"><div style="font-size:.7rem;color:#718096;text-transform:uppercase;font-weight:600;margin-bottom:.3rem" data-i18n="cr_soil">Soil Type</div><div style="font-size:1.2rem;font-weight:800;color:#1b5e20" data-i18n="cr_soil_val">Black</div></div>
+        <div style="background:#e8f5e9;border:1px solid #d4e6d4;border-radius:14px;padding:1rem"><div style="font-size:.7rem;color:#718096;text-transform:uppercase;font-weight:600;margin-bottom:.3rem" data-i18n="cr_season">Season</div><div style="font-size:1.2rem;font-weight:800;color:#1b5e20" data-i18n="cr_season_val">Rabi</div><div style="font-size:.72rem;color:#43a047" data-i18n="cr_season_sub">Oct–Mar</div></div>
+      </div>
+      <div class="g2" style="margin-bottom:1rem">
+        <div class="card"><div class="sec-title" data-i18n="cr_weather_ch">🌡 Weather-Based Suggestions</div><div style="position:relative;height:190px"><canvas id="weatherChart"></canvas></div><p style="font-size:.78rem;color:#718096;margin-top:.75rem" data-i18n="cr_weather_p">28°C avg is ideal for tomato flowering. Irrigate every 3 days, avoid overhead watering.</p></div>
+        <div class="card"><div class="sec-title" data-i18n="cr_market_ch">📊 Market Price Trend (₹/kg)</div><div style="position:relative;height:190px"><canvas id="marketChart"></canvas></div></div>
+      </div>
+      <div class="card" style="margin-bottom:1rem">
+        <div class="sec-title" data-i18n="cr_trending">🌟 Trending Crops in Your Region</div>
+        <div class="g3">
+          <div style="background:#fff;border:1px solid #d4e6d4;border-radius:14px;padding:1.1rem;display:flex;align-items:flex-start;gap:.875rem;transition:border-color .2s" onmouseover="this.style.borderColor='#43a047'" onmouseout="this.style.borderColor='#d4e6d4'"><div style="font-size:2rem;flex-shrink:0">🍅</div><div><div style="font-weight:800;font-size:.9rem;color:#1b5e20">Tomato</div><div style="font-size:.75rem;color:#43a047;font-weight:700" data-i18n="tom_match">95% match</div><div style="margin-top:.4rem"><span class="tag" data-i18n="tom_tag1">High Demand</span><span class="tag" data-i18n="tom_tag2">+34% profit</span></div></div></div>
+          <div style="background:#fff;border:1px solid #d4e6d4;border-radius:14px;padding:1.1rem;display:flex;align-items:flex-start;gap:.875rem;transition:border-color .2s" onmouseover="this.style.borderColor='#43a047'" onmouseout="this.style.borderColor='#d4e6d4'"><div style="font-size:2rem;flex-shrink:0">🌶</div><div><div style="font-weight:800;font-size:.9rem;color:#1b5e20">Red Chilli</div><div style="font-size:.75rem;color:#43a047;font-weight:700" data-i18n="chi_match">88% match</div><div style="margin-top:.4rem"><span class="tag" data-i18n="chi_tag1">Trending</span><span class="tag" data-i18n="chi_tag2">Export ready</span></div></div></div>
+          <div style="background:#fff;border:1px solid #d4e6d4;border-radius:14px;padding:1.1rem;display:flex;align-items:flex-start;gap:.875rem;transition:border-color .2s" onmouseover="this.style.borderColor='#43a047'" onmouseout="this.style.borderColor='#d4e6d4'"><div style="font-size:2rem;flex-shrink:0">🧅</div><div><div style="font-weight:800;font-size:.9rem;color:#1b5e20">Onion</div><div style="font-size:.75rem;color:#43a047;font-weight:700" data-i18n="oni_match">80% match</div><div style="margin-top:.4rem"><span class="tag" data-i18n="oni_tag1">Stable price</span><span class="tag" data-i18n="oni_tag2">Easy grow</span></div></div></div>
+        </div>
+      </div>
+      <div class="g2">
+        <div class="card">
+          <div class="sec-title" data-i18n="pl_title">💰 Profit / Loss Insight</div>
+          <div style="position:relative;height:170px"><canvas id="plChart"></canvas></div>
+          <div style="margin-top:.875rem;padding:.875rem;background:#e8f5e9;border-radius:10px">
+            <div style="font-size:.8rem;font-weight:700;color:#1b5e20" data-i18n="pl_note">Estimated Net Profit this Season</div>
+            <div style="font-size:1.35rem;font-weight:800;color:#2e7d32;margin:.2rem 0">₹1,14,000 <span style="font-size:.82rem;color:#43a047" data-i18n="profit_lbl2">revenue</span></div>
+            <div style="font-size:.75rem;color:#718096" data-i18n="pl_sub">Market price ₹24/kg × 4,750 kg estimated yield</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="sec-title" data-i18n="mandi_title">🏪 Live Mandi Prices</div>
+          <div class="mrow"><div><div style="font-weight:600;font-size:.875rem">Tomato</div><div style="font-size:.73rem;color:#718096">Pune APMC</div></div><div class="pup">₹24/kg ↑8%</div></div>
+          <div class="mrow"><div><div style="font-weight:600;font-size:.875rem">Tomato</div><div style="font-size:.73rem;color:#718096">Nashik APMC</div></div><div class="pup">₹22/kg ↑5%</div></div>
+          <div class="mrow"><div><div style="font-weight:600;font-size:.875rem">Red Chilli</div><div style="font-size:.73rem;color:#718096">Kolhapur</div></div><div class="pdn">₹110/kg ↓3%</div></div>
+          <div class="mrow"><div><div style="font-weight:600;font-size:.875rem">Onion</div><div style="font-size:.73rem;color:#718096">Lasalgaon</div></div><div class="pup">₹18/kg ↑12%</div></div>
+          <div class="mrow"><div><div style="font-weight:600;font-size:.875rem">Wheat</div><div style="font-size:.73rem;color:#718096">Nagpur</div></div><div style="font-weight:700;font-size:.85rem;color:#4a5568">₹22/kg →</div></div>
+        </div>
+      </div>
+    </div><!-- /sec-crops -->
+
+    <!-- ============================================
+         SECTION: DISEASE
+    ============================================= -->
+    <div id="sec-disease" class="dash-section">
+      <div class="g2">
+        <div class="card">
+          <div class="sec-title" data-i18n="dis_upload">🔬 Upload Crop Photo</div>
+          <div class="uzone" onclick="simDisease()">
+            <div id="u-icon" style="font-size:2.8rem;margin-bottom:.65rem">📸</div>
+            <div id="u-text" style="font-weight:700;margin-bottom:.3rem" data-i18n="dis_click" data-i18n-live="dis_click">Click to upload a leaf photo</div>
+            <div id="u-sub"  style="font-size:.78rem;color:#718096;margin-bottom:1rem" data-i18n="dis_sub" data-i18n-live="dis_sub">JPG, PNG up to 10MB · or drag &amp; drop</div>
+            <button class="btn btn-p btn-sm" onclick="event.stopPropagation();simDisease()" data-i18n="dis_btn">📷 Analyse Plant</button>
+          </div>
+          <div style="margin-top:.875rem;padding:.875rem;background:#e8f5e9;border-radius:12px">
+            <div style="font-size:.78rem;font-weight:700;color:#1b5e20;margin-bottom:.45rem" data-i18n="dis_tips_h">Tips for best results</div>
+            <div style="font-size:.76rem;color:#4a5568;display:flex;flex-direction:column;gap:.28rem">
+              <span data-i18n="dis_tip1">🌿 Capture the affected leaf clearly</span>
+              <span data-i18n="dis_tip2">☀️ Use natural daylight</span>
+              <span data-i18n="dis_tip3">📐 Keep leaf flat, fill the frame</span>
+              <span data-i18n="dis_tip4">🚫 Avoid blurry or shadowed shots</span>
+            </div>
+          </div>
+        </div>
+        <div id="dis-result">
+          <div class="card" style="height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:300px;color:#718096">
+            <div style="font-size:3.5rem;margin-bottom:.875rem">🌱</div>
+            <div style="font-weight:700;font-size:.95rem;color:#1a1a1a" data-i18n="dis_empty_h">No image analysed yet</div>
+            <div style="font-size:.8rem;margin-top:.35rem" data-i18n="dis_empty_s">Upload a photo to detect diseases</div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /sec-disease -->
+
+    <!-- ============================================
+         SECTION: ALERTS
+    ============================================= -->
+    <div id="sec-alerts" class="dash-section">
+      <div class="g2" style="margin-bottom:1rem">
+        <div style="background:#e8f5e9;border:1px solid #d4e6d4;border-radius:14px;padding:1rem"><div style="font-size:.7rem;color:#718096;text-transform:uppercase;font-weight:600;margin-bottom:.3rem" data-i18n="al_critical">Critical</div><div style="font-size:1.6rem;font-weight:800;color:#dc2626">2</div></div>
+        <div style="background:#e8f5e9;border:1px solid #d4e6d4;border-radius:14px;padding:1rem"><div style="font-size:.7rem;color:#718096;text-transform:uppercase;font-weight:600;margin-bottom:.3rem" data-i18n="al_warning">Warnings</div><div style="font-size:1.6rem;font-weight:800;color:#d97706">5</div></div>
+      </div>
+      <div class="card">
+        <div class="sec-title" data-i18n="al_history">📋 Alert History</div>
+        <div class="tl">
+          <div class="tl-item"><div class="tl-dot r"></div><div class="tl-card"><div class="tl-date" data-i18n="tl1_date">Today, 8:14 AM</div><div class="tl-title" data-i18n="tl1_title">⚠ Late Blight Risk Detected</div><div class="tl-desc" data-i18n="tl1_desc">High humidity 72% + cool nights = ideal for late blight. Apply Mancozeb 75 WP within 48 hrs.</div><button class="btn btn-p btn-sm" style="margin-top:.6rem" onclick="showSection('disease',null)" data-i18n="tl1_btn">View Treatment →</button></div></div>
+          <div class="tl-item"><div class="tl-dot a"></div><div class="tl-card"><div class="tl-date" data-i18n="tl2_date">Yesterday, 6:00 PM</div><div class="tl-title" data-i18n="tl2_title">💧 Irrigation Reminder</div><div class="tl-desc" data-i18n="tl2_desc">Soil moisture dropped to 38%. Irrigate within next 2 days for optimal flowering stage growth.</div></div></div>
+          <div class="tl-item"><div class="tl-dot b"></div><div class="tl-card"><div class="tl-date" data-i18n="tl3_date">Apr 3 · 10:30 AM</div><div class="tl-title" data-i18n="tl3_title">🌧 Rainfall Forecast Alert</div><div class="tl-desc" data-i18n="tl3_desc">IMD predicts 15–25mm rainfall Apr 5–6. Postpone fertiliser application by 3 days.</div></div></div>
+          <div class="tl-item"><div class="tl-dot g"></div><div class="tl-card"><div class="tl-date" data-i18n="tl4_date">Apr 1 · 9:00 AM</div><div class="tl-title" data-i18n="tl4_title">✅ Crop Inspection Complete</div><div class="tl-desc" data-i18n="tl4_desc">Weekly AI scan done. No major disease. Health score 82/100. Continue current practice.</div></div></div>
+          <div class="tl-item"><div class="tl-dot a"></div><div class="tl-card"><div class="tl-date" data-i18n="tl5_date">Mar 28 · 3:15 PM</div><div class="tl-title" data-i18n="tl5_title">📈 Market Price Spike</div><div class="tl-desc" data-i18n="tl5_desc">Tomato prices at Pune APMC jumped 18% to ₹22/kg. Current price ₹24/kg — good selling window.</div></div></div>
+          <div class="tl-item"><div class="tl-dot b"></div><div class="tl-card"><div class="tl-date" data-i18n="tl6_date">Mar 25 · 11:00 AM</div><div class="tl-title" data-i18n="tl6_title">🌾 Fertiliser Reminder</div><div class="tl-desc" data-i18n="tl6_desc">2nd dose NPK (19:19:19) due this week — Day 60–70 flowering stage. Apply 2.5 kg/acre.</div></div></div>
+        </div>
+      </div>
+    </div><!-- /sec-alerts -->
+
+    <!-- ============================================
+         SECTION: SETTINGS
+    ============================================= -->
+    <div id="sec-settings" class="dash-section">
+      <div class="g2">
+        <div class="card">
+          <div style="font-weight:700;font-size:.95rem;color:#1a1a1a;margin-bottom:.875rem;padding-bottom:.5rem;border-bottom:1px solid #d4e6d4" data-i18n="st_profile">👤 Profile</div>
+          <div style="margin-bottom:.875rem"><label class="fl" data-i18n="st_lbl_name">Name</label><input class="fi" value="Raju Patil"/></div>
+          <div style="margin-bottom:.875rem"><label class="fl" data-i18n="st_lbl_phone">Phone</label><input class="fi" value="+91 98765 43210"/></div>
+          <div style="margin-bottom:.875rem"><label class="fl" data-i18n="st_lbl_dist">District</label><input class="fi" value="Pune, Maharashtra"/></div>
+          <div style="margin-bottom:1rem"><label class="fl" data-i18n="st_lbl_crop">Primary Crop</label><select class="fi fsel-arrow"><option selected>Tomato</option><option>Wheat</option><option>Rice</option><option>Cotton</option></select></div>
+          <button class="btn btn-p btn-sm" data-i18n="st_save">Save Profile</button>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1rem">
+          <div class="card">
+            <div style="font-weight:700;font-size:.95rem;color:#1a1a1a;margin-bottom:.875rem;padding-bottom:.5rem;border-bottom:1px solid #d4e6d4" data-i18n="st_lang">🌐 Language</div>
+            <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+              <button class="btn btn-p btn-sm">EN – English</button>
+              <button class="btn btn-o btn-sm">HI – हिंदी</button>
+              <button class="btn btn-o btn-sm">KN – ಕನ್ನಡ</button>
+            </div>
+          </div>
+          <div class="card">
+            <div style="font-weight:700;font-size:.95rem;color:#1a1a1a;margin-bottom:.75rem;padding-bottom:.5rem;border-bottom:1px solid #d4e6d4" data-i18n="st_notif">🔔 Notifications</div>
+            <div class="s-row"><div><div style="font-size:.875rem;font-weight:600" data-i18n="st_n1_title">Disease Alerts</div><div style="font-size:.75rem;color:#718096" data-i18n="st_n1_sub">Notified when disease risk detected</div></div><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+            <div class="s-row"><div><div style="font-size:.875rem;font-weight:600" data-i18n="st_n2_title">Market Price Alerts</div><div style="font-size:.75rem;color:#718096" data-i18n="st_n2_sub">Price changes above 10%</div></div><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+            <div class="s-row"><div><div style="font-size:.875rem;font-weight:600" data-i18n="st_n3_title">Weather Warnings</div><div style="font-size:.75rem;color:#718096" data-i18n="st_n3_sub">Rain, frost, heatwave alerts</div></div><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+            <div class="s-row"><div><div style="font-size:.875rem;font-weight:600" data-i18n="st_n4_title">Irrigation Reminders</div><div style="font-size:.75rem;color:#718096" data-i18n="st_n4_sub">Soil moisture-based reminders</div></div><div class="tog" onclick="this.classList.toggle('on')"></div></div>
+            <div class="s-row"><div><div style="font-size:.875rem;font-weight:600" data-i18n="st_n5_title">Voice Assistant</div><div style="font-size:.75rem;color:#718096" data-i18n="st_n5_sub">Enable floating AI assistant</div></div><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /sec-settings -->
+
+    <!-- VOICE FAB -->
+    <div class="vfab">
+      <div class="vpanel" id="vpanel">
+        <div class="vp-hdr">
+          <div class="vp-title" data-i18n="voice_title">🎤 AgroSense AI Assistant</div>
+          <div class="vp-waves">
+            <div class="wv"></div><div class="wv"></div><div class="wv"></div><div class="wv"></div>
+            <div class="wv"></div><div class="wv"></div><div class="wv"></div><div class="wv"></div>
+          </div>
+        </div>
+        <div class="vp-msgs" id="vp-msgs">
+          <div class="vmsg ai" id="voice-greet-msg">नमस्ते! 🌱 I'm your AgroSense AI. Ask me anything about your crops, market prices, or disease treatment!</div>
+        </div>
+        <div class="vp-input">
+          <input class="vp-inp" id="vp-inp" data-i18n-ph="voice_ph" placeholder="Ask about your crops…" onkeydown="if(event.key==='Enter')sendVoice()" />
+          <button class="vp-send" onclick="sendVoice()">➤</button>
+        </div>
+      </div>
+      <button class="vfab-btn" id="vfab-btn" onclick="toggleVoice()">🎤</button>
+    </div>
+
+  </div><!-- /dash-main -->
+</div><!-- /pg-dash -->
+
+<!-- i18n must load BEFORE script.js so t() is available -->
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
