@@ -1,0 +1,769 @@
+/* =========================================
+   AgroSense  |  i18n.js
+   Multi-language support: EN / HI / KN
+   Pure JS, no libraries, lightweight.
+========================================= */
+
+const translations = {
+
+  en: {
+    /* ── LANDING ── */
+    lp_pill:       "🌿 Smart Agriculture Platform for Indian Farmers",
+    lp_h1_line1:   "Grow Smarter,",
+    lp_h1_span:    "Harvest Better",
+    lp_sub:        "AI-powered crop intelligence, disease detection, and market insights — built for every farmer, in every language.",
+    lp_btn_start:  "Get Started Free",
+    lp_btn_demo:   "▶ Watch Demo",
+    lp_stat1_l:    "Farmers Onboarded",
+    lp_stat2_l:    "Disease Detection Accuracy",
+    lp_stat3_l:    "Yield Revenue Saved",
+    lp_chip1:      "🌾 Crop Recommendation",
+    lp_chip2:      "🔬 Disease Detection",
+    lp_chip3:      "📈 Market Prices",
+    lp_chip4:      "🎤 Voice AI",
+
+    /* ── LOGIN ── */
+    login_h:       "Welcome to AgroSense",
+    login_sub:     "Sign in to your farm dashboard",
+    login_google:  "🔵 Continue with Google",
+    login_or:      "or sign in with email",
+    login_lbl_em:  "Email or Phone",
+    login_lbl_pw:  "Password",
+    login_btn:     "Sign In to Dashboard →",
+    login_foot:    "Don't have an account?",
+    login_reg:     "Register Free",
+    login_back:    "← Back to home",
+
+    /* ── SETUP ── */
+    setup_step:    "Farm Setup — Step 1 of 2",
+    setup_h:       "Tell us about your farm",
+    setup_sub:     "We'll personalise your dashboard, crop recommendations and alerts based on your profile.",
+    setup_lbl_name:"Your Full Name",
+    setup_lbl_crop:"Primary Crop",
+    setup_lbl_acre:"Farm Size (Acres)",
+    setup_lbl_soil:"Soil Type",
+    setup_lbl_exp: "Farming Experience",
+    setup_lbl_dur: "Crop Duration",
+    setup_lbl_vill:"Village / Taluka",
+    setup_lbl_state:"State",
+    setup_back:    "← Back",
+    setup_cont:    "Continue to Dashboard →",
+
+    /* ── SIDEBAR NAV ── */
+    nav_home:      "Home",
+    nav_crops:     "Crop Advice",
+    nav_disease:   "Disease Check",
+    nav_alerts:    "Alerts",
+    nav_settings:  "Settings",
+
+    /* ── TOPBAR ── */
+    title_home:    "Farm Overview",
+    title_crops:   "Crop Recommendations",
+    title_disease: "Disease Detection",
+    title_alerts:  "Alerts & Notifications",
+    title_settings:"Settings",
+
+    /* ── HOME: HERO ── */
+    hero_greeting: "Good morning ☀️",
+    hero_crop_info:"Tomato crop is on track · Day 67 of 150",
+    hs_season:     "Season Progress",
+    hs_price:      "Price /kg Today",
+    hs_alerts:     "Active Alerts",
+    hs_health:     "Health Score",
+
+    /* ── HOME: WEATHER ── */
+    weather_loc:   "📍 Pune, Maharashtra",
+    weather_desc:  "Partly Cloudy · Good for spray",
+    weather_hum:   "Humidity",
+    weather_wind:  "km/h",
+    weather_rain:  "Rain",
+    weather_5day:  "5-Day Forecast",
+
+    /* ── HOME: CROP HEALTH ── */
+    ch_title:      "Crop Health",
+    ch_leaf:       "Leaf health",
+    ch_root:       "Root strength",
+    ch_fruit:      "Fruit set",
+    ch_badge:      "Good Health",
+    ch_tag1:       "Day 67",
+    ch_tag2:       "Flowering",
+    ch_tag3:       "No Pest",
+
+    /* ── HOME: MARKET ── */
+    mkt_title:     "Market Prices",
+    mkt_mandi:     "🍅 Tomato · Pune APMC",
+    mkt_window:    "Best sell window: Apr 7–12",
+    mkt_full:      "Full Market →",
+
+    /* ── HOME: ALERTS ── */
+    al_title:      "Urgent Alerts",
+    al_badge:      "3 Active",
+    al1_title:     "🦠 Late Blight Risk – High",
+    al1_desc:      "High humidity + cool nights. Spray within 48 hrs.",
+    al1_btn:       "Treat Now",
+    al2_title:     "💧 Irrigation Due",
+    al2_desc:      "Soil moisture 38%. Due in 2 days.",
+    al3_title:     "🌧 Rain Forecast Friday",
+    al3_desc:      "15–25mm expected. Delay fertiliser.",
+
+    /* ── HOME: ACTIVITY ── */
+    act_title:     "Today's Activity",
+    act1_title:    "✅ Morning irrigation",
+    act1_sub:      "North field · 45 min",
+    act2_title:    "⚠ Disease scan alert",
+    act2_sub:      "Late blight risk flagged",
+    act3_title:    "⏳ Spray scheduled",
+    act3_sub:      "Mancozeb · Pending",
+    act4_title:    "⏳ Field walk",
+    act4_sub:      "Weekly visual inspection",
+
+    /* ── HOME: AI TIP ── */
+    ai_tip_title:  "🤖 AI Tip of the Day",
+    ai_tip_text:   "\"Your tomato plants are at peak flowering. Apply potassium-rich fertiliser (0-0-50) this week to boost fruit set by up to 20%.\"",
+    ai_tip_sub:    "Based on Day 67 data + weather forecast",
+
+    /* ── HOME: QUICK ACTIONS ── */
+    qa_title:      "Quick Actions",
+    qa_scan:       "🔬 Scan",
+    qa_advise:     "🌾 Advise",
+    qa_alerts:     "🔔 Alerts",
+    qa_ask:        "🎤 Ask AI",
+
+    /* ── HOME: YIELD CHART ── */
+    yield_title:   "📈 Yield Forecast",
+    yield_badge:   "On Track",
+    yield_lbl1:    "Expected yield",
+    yield_val1:    "4,750 kg/acre",
+    yield_lbl2:    "Harvest in",
+    yield_val2:    "83 days",
+    yield_lbl3:    "Est. revenue",
+
+    /* ── HOME: PROFIT CHART ── */
+    profit_title:  "💰 Season Economics",
+    profit_badge:  "Profitable",
+    profit_lbl1:   "Total cost",
+    profit_lbl2:   "Gross revenue",
+    profit_lbl3:   "Net profit",
+
+    /* ── CROPS SECTION ── */
+    cr_your_crop:  "Your Crop",
+    cr_farm_size:  "Farm Size",
+    cr_soil:       "Soil Type",
+    cr_soil_val:   "Black",
+    cr_season:     "Season",
+    cr_season_val: "Rabi",
+    cr_season_sub: "Oct–Mar",
+    cr_weather_ch: "🌡 Weather-Based Suggestions",
+    cr_weather_p:  "28°C avg is ideal for tomato flowering. Irrigate every 3 days, avoid overhead watering.",
+    cr_market_ch:  "📊 Market Price Trend (₹/kg)",
+    cr_trending:   "🌟 Trending Crops in Your Region",
+    tom_match:     "95% match",
+    tom_tag1:      "High Demand",
+    tom_tag2:      "+34% profit",
+    chi_match:     "88% match",
+    chi_tag1:      "Trending",
+    chi_tag2:      "Export ready",
+    oni_match:     "80% match",
+    oni_tag1:      "Stable price",
+    oni_tag2:      "Easy grow",
+    pl_title:      "💰 Profit / Loss Insight",
+    pl_note:       "Estimated Net Profit this Season",
+    pl_sub:        "Market price ₹24/kg × 4,750 kg estimated yield",
+    mandi_title:   "🏪 Live Mandi Prices",
+
+    /* ── DISEASE ── */
+    dis_upload:    "🔬 Upload Crop Photo",
+    dis_click:     "Click to upload a leaf photo",
+    dis_sub:       "JPG, PNG up to 10MB · or drag & drop",
+    dis_btn:       "📷 Analyse Plant",
+    dis_tips_h:    "Tips for best results",
+    dis_tip1:      "🌿 Capture the affected leaf clearly",
+    dis_tip2:      "☀️ Use natural daylight",
+    dis_tip3:      "📐 Keep leaf flat, fill the frame",
+    dis_tip4:      "🚫 Avoid blurry or shadowed shots",
+    dis_empty_h:   "No image analysed yet",
+    dis_empty_s:   "Upload a photo to detect diseases",
+    dis_analysing: "Analysing with AI…",
+    dis_scanning:  "Scanning 47 disease patterns…",
+    dis_done:      "Analysis complete",
+    dis_rescan:    "Click to scan another image",
+
+    /* ── ALERTS SECTION ── */
+    al_critical:   "Critical",
+    al_warning:    "Warnings",
+    al_history:    "📋 Alert History",
+    tl1_date:      "Today, 8:14 AM",
+    tl1_title:     "⚠ Late Blight Risk Detected",
+    tl1_desc:      "High humidity 72% + cool nights = ideal for late blight. Apply Mancozeb 75 WP within 48 hrs.",
+    tl1_btn:       "View Treatment →",
+    tl2_date:      "Yesterday, 6:00 PM",
+    tl2_title:     "💧 Irrigation Reminder",
+    tl2_desc:      "Soil moisture dropped to 38%. Irrigate within next 2 days for optimal flowering stage growth.",
+    tl3_date:      "Apr 3 · 10:30 AM",
+    tl3_title:     "🌧 Rainfall Forecast Alert",
+    tl3_desc:      "IMD predicts 15–25mm rainfall Apr 5–6. Postpone fertiliser application by 3 days.",
+    tl4_date:      "Apr 1 · 9:00 AM",
+    tl4_title:     "✅ Crop Inspection Complete",
+    tl4_desc:      "Weekly AI scan done. No major disease. Health score 82/100. Continue current practice.",
+    tl5_date:      "Mar 28 · 3:15 PM",
+    tl5_title:     "📈 Market Price Spike",
+    tl5_desc:      "Tomato prices at Pune APMC jumped 18% to ₹22/kg. Current price ₹24/kg — good selling window.",
+    tl6_date:      "Mar 25 · 11:00 AM",
+    tl6_title:     "🌾 Fertiliser Reminder",
+    tl6_desc:      "2nd dose NPK (19:19:19) due this week — Day 60–70 flowering stage. Apply 2.5 kg/acre.",
+
+    /* ── SETTINGS ── */
+    st_profile:    "👤 Profile",
+    st_lbl_name:   "Name",
+    st_lbl_phone:  "Phone",
+    st_lbl_dist:   "District",
+    st_lbl_crop:   "Primary Crop",
+    st_save:       "Save Profile",
+    st_lang:       "🌐 Language",
+    st_notif:      "🔔 Notifications",
+    st_n1_title:   "Disease Alerts",
+    st_n1_sub:     "Notified when disease risk detected",
+    st_n2_title:   "Market Price Alerts",
+    st_n2_sub:     "Price changes above 10%",
+    st_n3_title:   "Weather Warnings",
+    st_n3_sub:     "Rain, frost, heatwave alerts",
+    st_n4_title:   "Irrigation Reminders",
+    st_n4_sub:     "Soil moisture-based reminders",
+    st_n5_title:   "Voice Assistant",
+    st_n5_sub:     "Enable floating AI assistant",
+
+    /* ── VOICE AI ── */
+    voice_title:   "🎤 AgroSense AI Assistant",
+    voice_greet:   "नमस्ते! 🌱 I'm your AgroSense AI. Ask me anything about your crops, market prices, or disease treatment!",
+    voice_ph:      "Ask about your crops…",
+  },
+
+  /* ================================================================
+     HINDI
+  ================================================================ */
+  hi: {
+    lp_pill:       "🌿 भारतीय किसानों के लिए स्मार्ट कृषि मंच",
+    lp_h1_line1:   "समझदारी से उगाएं,",
+    lp_h1_span:    "बेहतर फसल काटें",
+    lp_sub:        "AI आधारित फसल बुद्धिमत्ता, रोग पहचान, और बाज़ार जानकारी — हर किसान के लिए, हर भाषा में।",
+    lp_btn_start:  "मुफ़्त शुरू करें",
+    lp_btn_demo:   "▶ डेमो देखें",
+    lp_stat1_l:    "किसान जुड़े",
+    lp_stat2_l:    "रोग पहचान सटीकता",
+    lp_stat3_l:    "उपज राजस्व बचाया",
+    lp_chip1:      "🌾 फसल सुझाव",
+    lp_chip2:      "🔬 रोग पहचान",
+    lp_chip3:      "📈 मंडी भाव",
+    lp_chip4:      "🎤 वॉयस AI",
+
+    login_h:       "AgroSense में आपका स्वागत है",
+    login_sub:     "अपने खेत के डैशबोर्ड में साइन इन करें",
+    login_google:  "🔵 Google से जारी रखें",
+    login_or:      "या ईमेल से साइन इन करें",
+    login_lbl_em:  "ईमेल या फोन",
+    login_lbl_pw:  "पासवर्ड",
+    login_btn:     "डैशबोर्ड में प्रवेश करें →",
+    login_foot:    "खाता नहीं है?",
+    login_reg:     "मुफ़्त पंजीकरण करें",
+    login_back:    "← होम पर वापस",
+
+    setup_step:    "खेत सेटअप — चरण 1 / 2",
+    setup_h:       "अपने खेत के बारे में बताएं",
+    setup_sub:     "हम आपकी प्रोफ़ाइल के आधार पर डैशबोर्ड, फसल सुझाव और अलर्ट व्यक्तिगत करेंगे।",
+    setup_lbl_name:"आपका पूरा नाम",
+    setup_lbl_crop:"मुख्य फसल",
+    setup_lbl_acre:"खेत का आकार (एकड़)",
+    setup_lbl_soil:"मिट्टी का प्रकार",
+    setup_lbl_exp: "खेती का अनुभव",
+    setup_lbl_dur: "फसल की अवधि",
+    setup_lbl_vill:"गाँव / तहसील",
+    setup_lbl_state:"राज्य",
+    setup_back:    "← वापस",
+    setup_cont:    "डैशबोर्ड पर जाएं →",
+
+    nav_home:      "होम",
+    nav_crops:     "फसल सलाह",
+    nav_disease:   "रोग जांच",
+    nav_alerts:    "अलर्ट",
+    nav_settings:  "सेटिंग्स",
+
+    title_home:    "खेत का अवलोकन",
+    title_crops:   "फसल सुझाव",
+    title_disease: "रोग पहचान",
+    title_alerts:  "अलर्ट और सूचनाएं",
+    title_settings:"सेटिंग्स",
+
+    hero_greeting: "सुप्रभात ☀️",
+    hero_crop_info:"टमाटर की फसल सही चल रही है · दिन 67 / 150",
+    hs_season:     "मौसम प्रगति",
+    hs_price:      "आज का भाव /किग्रा",
+    hs_alerts:     "सक्रिय अलर्ट",
+    hs_health:     "स्वास्थ्य स्कोर",
+
+    weather_loc:   "📍 पुणे, महाराष्ट्र",
+    weather_desc:  "आंशिक रूप से बादल · छिड़काव के लिए अच्छा",
+    weather_hum:   "आर्द्रता",
+    weather_wind:  "किमी/घं",
+    weather_rain:  "बारिश",
+    weather_5day:  "5 दिन का पूर्वानुमान",
+
+    ch_title:      "फसल स्वास्थ्य",
+    ch_leaf:       "पत्ती का स्वास्थ्य",
+    ch_root:       "जड़ की मजबूती",
+    ch_fruit:      "फल लगाव",
+    ch_badge:      "अच्छा स्वास्थ्य",
+    ch_tag1:       "दिन 67",
+    ch_tag2:       "फूल आना",
+    ch_tag3:       "कोई कीट नहीं",
+
+    mkt_title:     "मंडी भाव",
+    mkt_mandi:     "🍅 टमाटर · पुणे APMC",
+    mkt_window:    "बेचने का सबसे अच्छा समय: 7–12 अप्रैल",
+    mkt_full:      "पूरा बाज़ार →",
+
+    al_title:      "जरूरी अलर्ट",
+    al_badge:      "3 सक्रिय",
+    al1_title:     "🦠 लेट ब्लाइट खतरा – अधिक",
+    al1_desc:      "अधिक आर्द्रता + ठंडी रातें। 48 घंटे में छिड़काव करें।",
+    al1_btn:       "उपचार करें",
+    al2_title:     "💧 सिंचाई आवश्यक",
+    al2_desc:      "मिट्टी की नमी 38%। 2 दिन में सिंचाई करें।",
+    al3_title:     "🌧 शुक्रवार बारिश का अनुमान",
+    al3_desc:      "15–25 मिमी बारिश संभव। खाद डालने में देरी करें।",
+
+    act_title:     "आज की गतिविधि",
+    act1_title:    "✅ सुबह की सिंचाई",
+    act1_sub:      "उत्तर खेत · 45 मिनट",
+    act2_title:    "⚠ रोग स्कैन अलर्ट",
+    act2_sub:      "लेट ब्लाइट खतरा चिह्नित",
+    act3_title:    "⏳ छिड़काव निर्धारित",
+    act3_sub:      "मैनकोज़ेब · लंबित",
+    act4_title:    "⏳ खेत निरीक्षण",
+    act4_sub:      "साप्ताहिक दृश्य जांच",
+
+    ai_tip_title:  "🤖 आज की AI सलाह",
+    ai_tip_text:   "\"आपके टमाटर के पौधे पूर्ण फूल अवस्था में हैं। इस सप्ताह पोटैशियम युक्त खाद (0-0-50) डालें, फल 20% तक बढ़ सकता है।\"",
+    ai_tip_sub:    "दिन 67 डेटा + मौसम पूर्वानुमान के आधार पर",
+
+    qa_title:      "त्वरित कार्रवाई",
+    qa_scan:       "🔬 स्कैन",
+    qa_advise:     "🌾 सलाह",
+    qa_alerts:     "🔔 अलर्ट",
+    qa_ask:        "🎤 AI से पूछें",
+
+    yield_title:   "📈 उपज पूर्वानुमान",
+    yield_badge:   "सही राह पर",
+    yield_lbl1:    "अनुमानित उपज",
+    yield_val1:    "4,750 किग्रा/एकड़",
+    yield_lbl2:    "कटाई में",
+    yield_val2:    "83 दिन",
+    yield_lbl3:    "अनुमानित आय",
+
+    profit_title:  "💰 मौसम की अर्थव्यवस्था",
+    profit_badge:  "लाभदायक",
+    profit_lbl1:   "कुल लागत",
+    profit_lbl2:   "सकल आय",
+    profit_lbl3:   "शुद्ध लाभ",
+
+    cr_your_crop:  "आपकी फसल",
+    cr_farm_size:  "खेत का आकार",
+    cr_soil:       "मिट्टी का प्रकार",
+    cr_soil_val:   "काली",
+    cr_season:     "मौसम",
+    cr_season_val: "रबी",
+    cr_season_sub: "अक्टू–मार्च",
+    cr_weather_ch: "🌡 मौसम आधारित सुझाव",
+    cr_weather_p:  "28°C औसत टमाटर फूल अवस्था के लिए आदर्श है। हर 3 दिन में सिंचाई करें, ऊपर से पानी देने से बचें।",
+    cr_market_ch:  "📊 मंडी भाव रुझान (₹/किग्रा)",
+    cr_trending:   "🌟 आपके क्षेत्र में लोकप्रिय फसलें",
+    tom_match:     "95% मिलान",
+    tom_tag1:      "उच्च मांग",
+    tom_tag2:      "+34% लाभ",
+    chi_match:     "88% मिलान",
+    chi_tag1:      "ट्रेंडिंग",
+    chi_tag2:      "निर्यात योग्य",
+    oni_match:     "80% मिलान",
+    oni_tag1:      "स्थिर भाव",
+    oni_tag2:      "आसान खेती",
+    pl_title:      "💰 लाभ / हानि विश्लेषण",
+    pl_note:       "इस मौसम का अनुमानित शुद्ध लाभ",
+    pl_sub:        "मंडी भाव ₹24/किग्रा × 4,750 किग्रा अनुमानित उपज",
+    mandi_title:   "🏪 लाइव मंडी भाव",
+
+    dis_upload:    "🔬 फसल की फोटो अपलोड करें",
+    dis_click:     "पत्ती की फोटो अपलोड करने के लिए क्लिक करें",
+    dis_sub:       "JPG, PNG 10MB तक · या खींचकर छोड़ें",
+    dis_btn:       "📷 पौधे का विश्लेषण करें",
+    dis_tips_h:    "बेहतर परिणाम के लिए सुझाव",
+    dis_tip1:      "🌿 प्रभावित पत्ती को स्पष्ट रूप से कैप्चर करें",
+    dis_tip2:      "☀️ प्राकृतिक रोशनी का उपयोग करें",
+    dis_tip3:      "📐 पत्ती को सपाट रखें, फ्रेम भरें",
+    dis_tip4:      "🚫 धुंधली या छाया वाली तस्वीर से बचें",
+    dis_empty_h:   "अभी तक कोई छवि विश्लेषण नहीं",
+    dis_empty_s:   "रोग पहचानने के लिए फोटो अपलोड करें",
+    dis_analysing: "AI से विश्लेषण हो रहा है…",
+    dis_scanning:  "47 रोग पैटर्न स्कैन हो रहे हैं…",
+    dis_done:      "विश्लेषण पूर्ण",
+    dis_rescan:    "दूसरी छवि स्कैन करने के लिए क्लिक करें",
+
+    al_critical:   "गंभीर",
+    al_warning:    "चेतावनियां",
+    al_history:    "📋 अलर्ट इतिहास",
+    tl1_date:      "आज, सुबह 8:14",
+    tl1_title:     "⚠ लेट ब्लाइट खतरा पता चला",
+    tl1_desc:      "आर्द्रता 72% + ठंडी रातें = लेट ब्लाइट के लिए आदर्श। 48 घंटे में मैनकोज़ेब 75 WP लगाएं।",
+    tl1_btn:       "उपचार देखें →",
+    tl2_date:      "कल, शाम 6:00",
+    tl2_title:     "💧 सिंचाई की याद",
+    tl2_desc:      "मिट्टी की नमी 38% हो गई। फूल अवस्था के लिए अगले 2 दिनों में सिंचाई करें।",
+    tl3_date:      "3 अप्रैल · सुबह 10:30",
+    tl3_title:     "🌧 वर्षा पूर्वानुमान अलर्ट",
+    tl3_desc:      "IMD ने 5–6 अप्रैल को 15–25 मिमी वर्षा का अनुमान जताया। खाद डालना 3 दिन के लिए टालें।",
+    tl4_date:      "1 अप्रैल · सुबह 9:00",
+    tl4_title:     "✅ फसल निरीक्षण पूर्ण",
+    tl4_desc:      "साप्ताहिक AI स्कैन हुआ। कोई बड़ा रोग नहीं। स्वास्थ्य स्कोर 82/100। वर्तमान अभ्यास जारी रखें।",
+    tl5_date:      "28 मार्च · दोपहर 3:15",
+    tl5_title:     "📈 मंडी भाव में उछाल",
+    tl5_desc:      "पुणे APMC में टमाटर का भाव 18% बढ़कर ₹22/किग्रा हुआ। वर्तमान भाव ₹24/किग्रा — बेचने का अच्छा समय।",
+    tl6_date:      "25 मार्च · सुबह 11:00",
+    tl6_title:     "🌾 खाद की याद",
+    tl6_desc:      "इस सप्ताह NPK (19:19:19) की दूसरी खुराक देनी है — दिन 60–70 फूल अवस्था। 2.5 किग्रा/एकड़ डालें।",
+
+    st_profile:    "👤 प्रोफ़ाइल",
+    st_lbl_name:   "नाम",
+    st_lbl_phone:  "फोन",
+    st_lbl_dist:   "जिला",
+    st_lbl_crop:   "मुख्य फसल",
+    st_save:       "प्रोफ़ाइल सहेजें",
+    st_lang:       "🌐 भाषा",
+    st_notif:      "🔔 सूचनाएं",
+    st_n1_title:   "रोग अलर्ट",
+    st_n1_sub:     "रोग खतरा पता चलने पर सूचित करें",
+    st_n2_title:   "मंडी भाव अलर्ट",
+    st_n2_sub:     "10% से अधिक मूल्य परिवर्तन",
+    st_n3_title:   "मौसम चेतावनी",
+    st_n3_sub:     "बारिश, पाला, गर्मी के अलर्ट",
+    st_n4_title:   "सिंचाई रिमाइंडर",
+    st_n4_sub:     "मिट्टी नमी पर आधारित रिमाइंडर",
+    st_n5_title:   "वॉयस सहायक",
+    st_n5_sub:     "फ्लोटिंग AI सहायक सक्षम करें",
+
+    voice_title:   "🎤 AgroSense AI सहायक",
+    voice_greet:   "नमस्ते! 🌱 मैं आपका AgroSense AI हूँ। फसल, मंडी भाव या रोग उपचार के बारे में कुछ भी पूछें!",
+    voice_ph:      "अपनी फसल के बारे में पूछें…",
+  },
+
+  /* ================================================================
+     KANNADA
+  ================================================================ */
+  kn: {
+    lp_pill:       "🌿 ಭಾರತೀಯ ರೈತರಿಗಾಗಿ ಸ್ಮಾರ್ಟ್ ಕೃಷಿ ವೇದಿಕೆ",
+    lp_h1_line1:   "ಬುದ್ಧಿವಂತಿಕೆಯಿಂದ ಬೆಳೆಯಿರಿ,",
+    lp_h1_span:    "ಉತ್ತಮ ಸುಗ್ಗಿ ಮಾಡಿ",
+    lp_sub:        "AI ಆಧಾರಿತ ಬೆಳೆ ಬುದ್ಧಿವಂತಿಕೆ, ರೋಗ ಪತ್ತೆ ಮತ್ತು ಮಾರುಕಟ್ಟೆ ಮಾಹಿತಿ — ಪ್ರತಿ ರೈತರಿಗೆ, ಪ್ರತಿ ಭಾಷೆಯಲ್ಲಿ.",
+    lp_btn_start:  "ಉಚಿತವಾಗಿ ಪ್ರಾರಂಭಿಸಿ",
+    lp_btn_demo:   "▶ ಡೆಮೊ ನೋಡಿ",
+    lp_stat1_l:    "ರೈತರು ಸೇರಿದ್ದಾರೆ",
+    lp_stat2_l:    "ರೋಗ ಪತ್ತೆ ನಿಖರತೆ",
+    lp_stat3_l:    "ಇಳುವರಿ ಆದಾಯ ಉಳಿಸಲಾಗಿದೆ",
+    lp_chip1:      "🌾 ಬೆಳೆ ಶಿಫಾರಸು",
+    lp_chip2:      "🔬 ರೋಗ ಪತ್ತೆ",
+    lp_chip3:      "📈 ಮಾರುಕಟ್ಟೆ ಬೆಲೆ",
+    lp_chip4:      "🎤 ಧ್ವನಿ AI",
+
+    login_h:       "AgroSense ಗೆ ಸ್ವಾಗತ",
+    login_sub:     "ನಿಮ್ಮ ಜಮೀನು ಡ್ಯಾಶ್‌ಬೋರ್ಡ್‌ಗೆ ಸೈನ್ ಇನ್ ಮಾಡಿ",
+    login_google:  "🔵 Google ಮೂಲಕ ಮುಂದುವರಿಯಿರಿ",
+    login_or:      "ಅಥವಾ ಇಮೇಲ್ ಮೂಲಕ ಸೈನ್ ಇನ್ ಮಾಡಿ",
+    login_lbl_em:  "ಇಮೇಲ್ ಅಥವಾ ಫೋನ್",
+    login_lbl_pw:  "ಪಾಸ್‌ವರ್ಡ್",
+    login_btn:     "ಡ್ಯಾಶ್‌ಬೋರ್ಡ್‌ಗೆ ಪ್ರವೇಶಿಸಿ →",
+    login_foot:    "ಖಾತೆ ಇಲ್ಲವೇ?",
+    login_reg:     "ಉಚಿತ ನೋಂದಣಿ",
+    login_back:    "← ಹೋಮ್‌ಗೆ ಹಿಂತಿರುಗಿ",
+
+    setup_step:    "ಜಮೀನು ಸೆಟಪ್ — ಹಂತ 1 / 2",
+    setup_h:       "ನಿಮ್ಮ ಜಮೀನಿನ ಬಗ್ಗೆ ತಿಳಿಸಿ",
+    setup_sub:     "ನಿಮ್ಮ ಪ್ರೊಫೈಲ್ ಆಧರಿಸಿ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್, ಬೆಳೆ ಶಿಫಾರಸು ಮತ್ತು ಅಲರ್ಟ್‌ಗಳನ್ನು ವ್ಯಕ್ತಿಗತಗೊಳಿಸುತ್ತೇವೆ.",
+    setup_lbl_name:"ನಿಮ್ಮ ಪೂರ್ಣ ಹೆಸರು",
+    setup_lbl_crop:"ಮುಖ್ಯ ಬೆಳೆ",
+    setup_lbl_acre:"ಜಮೀನಿನ ಗಾತ್ರ (ಎಕರೆ)",
+    setup_lbl_soil:"ಮಣ್ಣಿನ ವಿಧ",
+    setup_lbl_exp: "ಕೃಷಿ ಅನುಭವ",
+    setup_lbl_dur: "ಬೆಳೆ ಅವಧಿ",
+    setup_lbl_vill:"ಗ್ರಾಮ / ತಾಲೂಕ",
+    setup_lbl_state:"ರಾಜ್ಯ",
+    setup_back:    "← ಹಿಂದೆ",
+    setup_cont:    "ಡ್ಯಾಶ್‌ಬೋರ್ಡ್‌ಗೆ ಮುಂದುವರಿಯಿರಿ →",
+
+    nav_home:      "ಮನೆ",
+    nav_crops:     "ಬೆಳೆ ಸಲಹೆ",
+    nav_disease:   "ರೋಗ ತಪಾಸಣೆ",
+    nav_alerts:    "ಅಲರ್ಟ್‌ಗಳು",
+    nav_settings:  "ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
+
+    title_home:    "ಜಮೀನಿನ ಅವಲೋಕನ",
+    title_crops:   "ಬೆಳೆ ಶಿಫಾರಸುಗಳು",
+    title_disease: "ರೋಗ ಪತ್ತೆ",
+    title_alerts:  "ಅಲರ್ಟ್ ಮತ್ತು ಸೂಚನೆಗಳು",
+    title_settings:"ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
+
+    hero_greeting: "ಶುಭೋದಯ ☀️",
+    hero_crop_info:"ಟೊಮೇಟೊ ಬೆಳೆ ಸರಿಯಾಗಿ ಸಾಗುತ್ತಿದೆ · ದಿನ 67 / 150",
+    hs_season:     "ಋತು ಪ್ರಗತಿ",
+    hs_price:      "ಇಂದಿನ ಬೆಲೆ /ಕೆಜಿ",
+    hs_alerts:     "ಸಕ್ರಿಯ ಅಲರ್ಟ್",
+    hs_health:     "ಆರೋಗ್ಯ ಅಂಕ",
+
+    weather_loc:   "📍 ಪುಣೆ, ಮಹಾರಾಷ್ಟ್ರ",
+    weather_desc:  "ಭಾಗಶಃ ಮೋಡ · ಸಿಂಪಡಣೆಗೆ ಸೂಕ್ತ",
+    weather_hum:   "ತೇವಾಂಶ",
+    weather_wind:  "ಕಿಮೀ/ಗಂ",
+    weather_rain:  "ಮಳೆ",
+    weather_5day:  "5 ದಿನದ ಮುನ್ಸೂಚನೆ",
+
+    ch_title:      "ಬೆಳೆ ಆರೋಗ್ಯ",
+    ch_leaf:       "ಎಲೆ ಆರೋಗ್ಯ",
+    ch_root:       "ಬೇರಿನ ಶಕ್ತಿ",
+    ch_fruit:      "ಹಣ್ಣು ಕಟ್ಟುವಿಕೆ",
+    ch_badge:      "ಉತ್ತಮ ಆರೋಗ್ಯ",
+    ch_tag1:       "ದಿನ 67",
+    ch_tag2:       "ಹೂ ಬಿಡುವಿಕೆ",
+    ch_tag3:       "ಕೀಟ ಇಲ್ಲ",
+
+    mkt_title:     "ಮಾರುಕಟ್ಟೆ ಬೆಲೆ",
+    mkt_mandi:     "🍅 ಟೊಮೇಟೊ · ಪುಣೆ APMC",
+    mkt_window:    "ಮಾರಾಟಕ್ಕೆ ಉತ್ತಮ ಸಮಯ: ಏ 7–12",
+    mkt_full:      "ಪೂರ್ಣ ಮಾರುಕಟ್ಟೆ →",
+
+    al_title:      "ತುರ್ತು ಅಲರ್ಟ್‌ಗಳು",
+    al_badge:      "3 ಸಕ್ರಿಯ",
+    al1_title:     "🦠 ತಡ ರೋಗ ಅಪಾಯ – ಹೆಚ್ಚು",
+    al1_desc:      "ಹೆಚ್ಚಿನ ತೇವಾಂಶ + ತಣ್ಣನೆ ರಾತ್ರಿ. 48 ಗಂಟೆಯಲ್ಲಿ ಸಿಂಪಡಿಸಿ.",
+    al1_btn:       "ಚಿಕಿತ್ಸೆ ಮಾಡಿ",
+    al2_title:     "💧 ನೀರಾವರಿ ಅಗತ್ಯ",
+    al2_desc:      "ಮಣ್ಣಿನ ತೇವ 38%. 2 ದಿನದಲ್ಲಿ ನೀರು ಹಾಕಿ.",
+    al3_title:     "🌧 ಶುಕ್ರವಾರ ಮಳೆ ಮುನ್ಸೂಚನೆ",
+    al3_desc:      "15–25 ಮಿಮೀ ಮಳೆ ನಿರೀಕ್ಷೆ. ಗೊಬ್ಬರ ಹಾಕುವುದು ತಡ ಮಾಡಿ.",
+
+    act_title:     "ಇಂದಿನ ಚಟುವಟಿಕೆ",
+    act1_title:    "✅ ಬೆಳಿಗ್ಗೆ ನೀರಾವರಿ",
+    act1_sub:      "ಉತ್ತರ ಜಮೀನು · 45 ನಿಮಿಷ",
+    act2_title:    "⚠ ರೋಗ ಸ್ಕ್ಯಾನ್ ಅಲರ್ಟ್",
+    act2_sub:      "ತಡ ರೋಗ ಅಪಾಯ ಗುರುತಿಸಲಾಗಿದೆ",
+    act3_title:    "⏳ ಸಿಂಪಡಣೆ ನಿಗದಿ",
+    act3_sub:      "ಮ್ಯಾಂಕೋಜೆಬ್ · ಬಾಕಿ",
+    act4_title:    "⏳ ಜಮೀನು ತಪಾಸಣೆ",
+    act4_sub:      "ವಾರದ ದೃಶ್ಯ ಪರಿಶೀಲನೆ",
+
+    ai_tip_title:  "🤖 ಇಂದಿನ AI ಸಲಹೆ",
+    ai_tip_text:   "\"ನಿಮ್ಮ ಟೊಮೇಟೊ ಗಿಡಗಳು ಹೂ ಬಿಡುವ ಉತ್ತುಂಗದಲ್ಲಿವೆ. ಈ ವಾರ ಪೊಟ್ಯಾಶಿಯಂ ಗೊಬ್ಬರ (0-0-50) ಹಾಕಿ, ಹಣ್ಣು ಕಟ್ಟುವಿಕೆ 20% ವರೆಗೆ ಹೆಚ್ಚಾಗಬಹುದು.\"",
+    ai_tip_sub:    "ದಿನ 67 ಡೇಟಾ + ಹವಾಮಾನ ಮುನ್ಸೂಚನೆ ಆಧರಿಸಿ",
+
+    qa_title:      "ತ್ವರಿತ ಕ್ರಿಯೆಗಳು",
+    qa_scan:       "🔬 ಸ್ಕ್ಯಾನ್",
+    qa_advise:     "🌾 ಸಲಹೆ",
+    qa_alerts:     "🔔 ಅಲರ್ಟ್",
+    qa_ask:        "🎤 AI ಕೇಳಿ",
+
+    yield_title:   "📈 ಇಳುವರಿ ಮುನ್ಸೂಚನೆ",
+    yield_badge:   "ಸರಿಯಾದ ದಾರಿಯಲ್ಲಿ",
+    yield_lbl1:    "ನಿರೀಕ್ಷಿತ ಇಳುವರಿ",
+    yield_val1:    "4,750 ಕೆಜಿ/ಎಕರೆ",
+    yield_lbl2:    "ಕೊಯ್ಲಿಗೆ",
+    yield_val2:    "83 ದಿನ",
+    yield_lbl3:    "ಅಂದಾಜು ಆದಾಯ",
+
+    profit_title:  "💰 ಋತು ಅರ್ಥಶಾಸ್ತ್ರ",
+    profit_badge:  "ಲಾಭದಾಯಕ",
+    profit_lbl1:   "ಒಟ್ಟು ವೆಚ್ಚ",
+    profit_lbl2:   "ಒಟ್ಟು ಆದಾಯ",
+    profit_lbl3:   "ನಿವ್ವಳ ಲಾಭ",
+
+    cr_your_crop:  "ನಿಮ್ಮ ಬೆಳೆ",
+    cr_farm_size:  "ಜಮೀನಿನ ಗಾತ್ರ",
+    cr_soil:       "ಮಣ್ಣಿನ ವಿಧ",
+    cr_soil_val:   "ಕಪ್ಪು",
+    cr_season:     "ಋತು",
+    cr_season_val: "ರಬಿ",
+    cr_season_sub: "ಅಕ್ಟೋ–ಮಾರ್ಚ್",
+    cr_weather_ch: "🌡 ಹವಾಮಾನ ಆಧರಿತ ಸಲಹೆ",
+    cr_weather_p:  "28°C ಸರಾಸರಿ ಟೊಮೇಟೊ ಹೂ ಬಿಡಲು ಸೂಕ್ತ. ಪ್ರತಿ 3 ದಿನಕ್ಕೊಮ್ಮೆ ನೀರು ಹಾಕಿ, ಮೇಲಿನಿಂದ ನೀರು ಹಾಕಬೇಡಿ.",
+    cr_market_ch:  "📊 ಮಾರುಕಟ್ಟೆ ಬೆಲೆ ಪ್ರವೃತ್ತಿ (₹/ಕೆಜಿ)",
+    cr_trending:   "🌟 ನಿಮ್ಮ ಪ್ರದೇಶದಲ್ಲಿ ಜನಪ್ರಿಯ ಬೆಳೆಗಳು",
+    tom_match:     "95% ಹೊಂದಾಣಿಕೆ",
+    tom_tag1:      "ಹೆಚ್ಚಿನ ಬೇಡಿಕೆ",
+    tom_tag2:      "+34% ಲಾಭ",
+    chi_match:     "88% ಹೊಂದಾಣಿಕೆ",
+    chi_tag1:      "ಟ್ರೆಂಡಿಂಗ್",
+    chi_tag2:      "ರಫ್ತು ಯೋಗ್ಯ",
+    oni_match:     "80% ಹೊಂದಾಣಿಕೆ",
+    oni_tag1:      "ಸ್ಥಿರ ಬೆಲೆ",
+    oni_tag2:      "ಸುಲಭ ಬೆಳೆ",
+    pl_title:      "💰 ಲಾಭ / ನಷ್ಟ ವಿಶ್ಲೇಷಣೆ",
+    pl_note:       "ಈ ಋತುವಿನ ಅಂದಾಜು ನಿವ್ವಳ ಲಾಭ",
+    pl_sub:        "ಮಾರುಕಟ್ಟೆ ಬೆಲೆ ₹24/ಕೆಜಿ × 4,750 ಕೆಜಿ ಅಂದಾಜು ಇಳುವರಿ",
+    mandi_title:   "🏪 ನೇರ ಮಂಡಿ ಬೆಲೆ",
+
+    dis_upload:    "🔬 ಬೆಳೆ ಫೋಟೋ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ",
+    dis_click:     "ಎಲೆ ಫೋಟೋ ಅಪ್‌ಲೋಡ್ ಮಾಡಲು ಕ್ಲಿಕ್ ಮಾಡಿ",
+    dis_sub:       "JPG, PNG 10MB ವರೆಗೆ · ಅಥವಾ ಎಳೆದು ಬಿಡಿ",
+    dis_btn:       "📷 ಗಿಡ ವಿಶ್ಲೇಷಿಸಿ",
+    dis_tips_h:    "ಉತ್ತಮ ಫಲಿತಾಂಶಕ್ಕೆ ಸಲಹೆ",
+    dis_tip1:      "🌿 ಬಾಧಿತ ಎಲೆಯನ್ನು ಸ್ಪಷ್ಟವಾಗಿ ತೆಗೆಯಿರಿ",
+    dis_tip2:      "☀️ ನೈಸರ್ಗಿಕ ಬೆಳಕು ಬಳಸಿ",
+    dis_tip3:      "📐 ಎಲೆ ಚಪ್ಪಟೆಯಾಗಿ ಇಡಿ, ಫ್ರೇಮ್ ತುಂಬಿ",
+    dis_tip4:      "🚫 ಮಸುಕು ಅಥವಾ ನೆರಳಿನ ಚಿತ್ರ ಬೇಡ",
+    dis_empty_h:   "ಇನ್ನೂ ಯಾವುದೇ ಚಿತ್ರ ವಿಶ್ಲೇಷಿಸಿಲ್ಲ",
+    dis_empty_s:   "ರೋಗ ಪತ್ತೆ ಮಾಡಲು ಫೋಟೋ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ",
+    dis_analysing: "AI ಜೊತೆ ವಿಶ್ಲೇಷಿಸಲಾಗುತ್ತಿದೆ…",
+    dis_scanning:  "47 ರೋಗ ಮಾದರಿ ಸ್ಕ್ಯಾನ್ ಆಗುತ್ತಿದೆ…",
+    dis_done:      "ವಿಶ್ಲೇಷಣೆ ಪೂರ್ಣ",
+    dis_rescan:    "ಇನ್ನೊಂದು ಚಿತ್ರ ಸ್ಕ್ಯಾನ್ ಮಾಡಲು ಕ್ಲಿಕ್ ಮಾಡಿ",
+
+    al_critical:   "ತೀವ್ರ",
+    al_warning:    "ಎಚ್ಚರಿಕೆಗಳು",
+    al_history:    "📋 ಅಲರ್ಟ್ ಇತಿಹಾಸ",
+    tl1_date:      "ಇಂದು, ಬೆ.8:14",
+    tl1_title:     "⚠ ತಡ ರೋಗ ಅಪಾಯ ಪತ್ತೆ",
+    tl1_desc:      "ತೇವಾಂಶ 72% + ತಣ್ಣನೆ ರಾತ್ರಿ = ತಡ ರೋಗಕ್ಕೆ ಸೂಕ್ತ. 48 ಗಂಟೆಯಲ್ಲಿ ಮ್ಯಾಂಕೋಜೆಬ್ 75 WP ಸಿಂಪಡಿಸಿ.",
+    tl1_btn:       "ಚಿಕಿತ್ಸೆ ನೋಡಿ →",
+    tl2_date:      "ನಿನ್ನೆ, ಸಂ.6:00",
+    tl2_title:     "💧 ನೀರಾವರಿ ಜ್ಞಾಪಕ",
+    tl2_desc:      "ಮಣ್ಣಿನ ತೇವ 38%ಕ್ಕೆ ಇಳಿದಿದೆ. ಹೂ ಬಿಡುವ ಹಂತಕ್ಕೆ ಮುಂದಿನ 2 ದಿನದಲ್ಲಿ ನೀರು ಹಾಕಿ.",
+    tl3_date:      "ಏ 3 · ಬೆ.10:30",
+    tl3_title:     "🌧 ಮಳೆ ಮುನ್ಸೂಚನೆ ಅಲರ್ಟ್",
+    tl3_desc:      "IMD ಏ 5–6ರಂದು 15–25 ಮಿಮೀ ಮಳೆ ಅಂದಾಜಿಸಿದೆ. ಗೊಬ್ಬರ ಹಾಕುವುದನ್ನು 3 ದಿನ ಮುಂದೂಡಿ.",
+    tl4_date:      "ಏ 1 · ಬೆ.9:00",
+    tl4_title:     "✅ ಬೆಳೆ ತಪಾಸಣೆ ಪೂರ್ಣ",
+    tl4_desc:      "ವಾರದ AI ಸ್ಕ್ಯಾನ್ ಆಯಿತು. ದೊಡ್ಡ ರೋಗ ಇಲ್ಲ. ಆರೋಗ್ಯ ಅಂಕ 82/100. ಪ್ರಸ್ತುತ ವಿಧಾನ ಮುಂದುವರಿಸಿ.",
+    tl5_date:      "ಮಾ 28 · ಮ.3:15",
+    tl5_title:     "📈 ಮಾರುಕಟ್ಟೆ ಬೆಲೆ ಏರಿಕೆ",
+    tl5_desc:      "ಪುಣೆ APMC ನಲ್ಲಿ ಟೊಮೇಟೊ ಬೆಲೆ 18% ಏರಿ ₹22/ಕೆಜಿ ಆಯಿತು. ಪ್ರಸ್ತುತ ₹24/ಕೆಜಿ — ಮಾರಾಟಕ್ಕೆ ಒಳ್ಳೆಯ ಸಮಯ.",
+    tl6_date:      "ಮಾ 25 · ಬೆ.11:00",
+    tl6_title:     "🌾 ಗೊಬ್ಬರ ಜ್ಞಾಪಕ",
+    tl6_desc:      "ಈ ವಾರ NPK (19:19:19) ಎರಡನೇ ಮಾತ್ರೆ ಕೊಡಬೇಕು — ದಿನ 60–70 ಹೂ ಬಿಡುವ ಹಂತ. 2.5 ಕೆಜಿ/ಎಕರೆ ಹಾಕಿ.",
+
+    st_profile:    "👤 ಪ್ರೊಫೈಲ್",
+    st_lbl_name:   "ಹೆಸರು",
+    st_lbl_phone:  "ಫೋನ್",
+    st_lbl_dist:   "ಜಿಲ್ಲೆ",
+    st_lbl_crop:   "ಮುಖ್ಯ ಬೆಳೆ",
+    st_save:       "ಪ್ರೊಫೈಲ್ ಉಳಿಸಿ",
+    st_lang:       "🌐 ಭಾಷೆ",
+    st_notif:      "🔔 ಸೂಚನೆಗಳು",
+    st_n1_title:   "ರೋಗ ಅಲರ್ಟ್",
+    st_n1_sub:     "ರೋಗ ಅಪಾಯ ಪತ್ತೆಯಾದಾಗ ತಿಳಿಸಿ",
+    st_n2_title:   "ಮಾರುಕಟ್ಟೆ ಬೆಲೆ ಅಲರ್ಟ್",
+    st_n2_sub:     "10%ಕ್ಕಿಂತ ಹೆಚ್ಚು ಬೆಲೆ ಬದಲಾವಣೆ",
+    st_n3_title:   "ಹವಾಮಾನ ಎಚ್ಚರಿಕೆ",
+    st_n3_sub:     "ಮಳೆ, ಹಿಮ, ಬಿಸಿಲಿನ ಅಲರ್ಟ್",
+    st_n4_title:   "ನೀರಾವರಿ ಜ್ಞಾಪಕ",
+    st_n4_sub:     "ಮಣ್ಣಿನ ತೇವ ಆಧರಿತ ಜ್ಞಾಪಕ",
+    st_n5_title:   "ಧ್ವನಿ ಸಹಾಯಕ",
+    st_n5_sub:     "ತೇಲುವ AI ಸಹಾಯಕ ಸಕ್ರಿಯಗೊಳಿಸಿ",
+
+    voice_title:   "🎤 AgroSense AI ಸಹಾಯಕ",
+    voice_greet:   "ನಮಸ್ಕಾರ! 🌱 ನಾನು ನಿಮ್ಮ AgroSense AI. ಬೆಳೆ, ಮಾರುಕಟ್ಟೆ ಬೆಲೆ ಅಥವಾ ರೋಗ ಚಿಕಿತ್ಸೆ ಬಗ್ಗೆ ಏನಾದರೂ ಕೇಳಿ!",
+    voice_ph:      "ನಿಮ್ಮ ಬೆಳೆ ಬಗ್ಗೆ ಕೇಳಿ…",
+  }
+};
+
+/* =========================================
+   i18n ENGINE
+   Reads data-i18n attributes and replaces
+   text content with the correct translation.
+   Also handles placeholders for inputs.
+========================================= */
+
+var currentLang = localStorage.getItem('agrosense_lang') || 'en';
+
+function t(key) {
+  var lang = translations[currentLang] || translations['en'];
+  return lang[key] || translations['en'][key] || key;
+}
+
+function applyTranslations() {
+  /* ── text nodes ── */
+  document.querySelectorAll('[data-i18n]').forEach(function(el) {
+    var key = el.getAttribute('data-i18n');
+    el.textContent = t(key);
+  });
+
+  /* ── placeholder text ── */
+  document.querySelectorAll('[data-i18n-ph]').forEach(function(el) {
+    var key = el.getAttribute('data-i18n-ph');
+    el.placeholder = t(key);
+  });
+
+  /* ── topbar title (driven by current section) ── */
+  var tb = document.getElementById('tb-title');
+  if (tb) {
+    var key = tb.getAttribute('data-i18n-live');
+    if (key) tb.textContent = t(key);
+  }
+
+  /* ── voice panel greeting (only if not yet chatted) ── */
+  var vgreet = document.getElementById('voice-greet-msg');
+  if (vgreet) vgreet.textContent = t('voice_greet');
+
+  /* ── disease scan state text (if mid-scan or reset) ── */
+  var uIcon = document.getElementById('u-icon');
+  var uText = document.getElementById('u-text');
+  var uSub  = document.getElementById('u-sub');
+  if (uText && uText.getAttribute('data-i18n-live')) {
+    uText.textContent = t(uText.getAttribute('data-i18n-live'));
+  }
+  if (uSub && uSub.getAttribute('data-i18n-live')) {
+    uSub.textContent = t(uSub.getAttribute('data-i18n-live'));
+  }
+}
+
+/* =========================================
+   LANGUAGE SWITCHER  (replaces setLang)
+========================================= */
+function setLang(btn) {
+  document.querySelectorAll('.lang-btn').forEach(function(b) { b.classList.remove('on'); });
+  if (btn) btn.classList.add('on');
+
+  var code = btn ? btn.textContent.trim().toLowerCase() : 'en';
+  /* Map button label → lang code */
+  var map = { 'en': 'en', 'hi': 'hi', 'kn': 'kn' };
+  currentLang = map[code] || 'en';
+
+  localStorage.setItem('agrosense_lang', currentLang);
+  applyTranslations();
+
+  /* also update sectionTitles mapping used by showSection() */
+  updateSectionTitleMap();
+}
+
+/* keep sectionTitles in sync for showSection() topbar updates */
+function updateSectionTitleMap() {
+  if (typeof sectionTitles !== 'undefined') {
+    sectionTitles.home     = t('title_home');
+    sectionTitles.crops    = t('title_crops');
+    sectionTitles.disease  = t('title_disease');
+    sectionTitles.alerts   = t('title_alerts');
+    sectionTitles.settings = t('title_settings');
+  }
+}
+
+/* =========================================
+   BOOT: restore saved language on load
+========================================= */
+document.addEventListener('DOMContentLoaded', function() {
+  var saved = localStorage.getItem('agrosense_lang') || 'en';
+  currentLang = saved;
+
+  /* highlight the correct lang button */
+  document.querySelectorAll('.lang-btn').forEach(function(b) {
+    b.classList.remove('on');
+    if (b.textContent.trim().toLowerCase() === saved) {
+      b.classList.add('on');
+    }
+  });
+
+  applyTranslations();
+  updateSectionTitleMap();
+});
